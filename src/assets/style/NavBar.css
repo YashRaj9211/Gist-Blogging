@@ -1,0 +1,44 @@
+.nav-bar{
+    display: flex;
+    top: 10px;
+    position: fixed;
+    font-size: var(--button-size);
+    letter-spacing: var(--button-letter-spacing);
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    width: 90vw;
+}
+
+.logo{
+    font-size: 33px;
+    letter-spacing: 0.25px;
+    font-weight: 900;
+}
+.nav-items{
+    display: flex;
+    list-style: none;
+}
+
+.item{
+    margin: 5px;
+    /* background-color: antiquewhite; */
+    padding: 12px;
+    cursor: pointer;
+}
+
+.item:hover{
+    background-color: var(--black);
+    color: var(--wheat);
+    font-weight: 600    ;
+}
+
+#login{
+    background-color: var(--black);
+    color: var(--wheat);
+}
+
+#login:hover{
+    background-color: var(--wheat);
+    color: var(--black);
+}
