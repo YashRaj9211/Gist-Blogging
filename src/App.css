@@ -7,27 +7,36 @@
 }
 
 .App {
-  display: flex;
+  /* overflow-y: hidden; */
+  /* display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column; */
   width: 100vw;
   align-items: center;
   align-content: center;
   height: 100vh;
   color: var(--wheat);
+  /* color: #f5deb3; */
   /* background: #000; */
 }
 
 .welcome{
+  /* background-color: rgba(0, 255, 255, 0.175); */
   color: var(--wheat);
-  max-width: 50vw;
-  /* min-height: 100vh; */
-  margin-top: 70vh;
-  mix-blend-mode: difference;
-  /* background-color: aqua; */
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 50px;
-  text-align: center;
   font-weight: bold;
+  text-align: center;
+  mix-blend-mode: difference;
+  margin: auto;
+}
+
+#content-div{
+  width: 100%;
 }
 
 

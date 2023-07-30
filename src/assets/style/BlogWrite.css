@@ -1,0 +1,17 @@
+.blog-write{
+    margin: 0 50px;
+    color: var(--black);
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.quill-editor{  
+    min-height: 500px;
+    background-color: var(--black);
+}
+
+.view-blog{
+    border: 2px solid black;
+    width: 50vw;
+}

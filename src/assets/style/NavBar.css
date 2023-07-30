@@ -7,7 +7,11 @@
     justify-content: space-between;
     align-items: center;
     color: var(--black);
-    width: 90vw;
+    width: 100vw;
+    z-index: 9999;
+    padding: 0 60px;
+    /* transition: background-color 300ms ease-in-out; */
+    /* background-color: rgb(0, 0, 0); */
 }
 
 .logo{
@@ -20,17 +24,26 @@
     list-style: none;
 }
 
+
 .item{
     margin: 5px;
     /* background-color: antiquewhite; */
     padding: 12px;
     cursor: pointer;
+    border-radius: 10px;
+    font-weight: 500;
 }
 
 .item:hover{
     background-color: var(--black);
     color: var(--wheat);
-    font-weight: 600    ;
+}
+
+
+
+input:active{
+    background-color: var(--black);
+    color: var(--wheat);
 }
 
 #login{

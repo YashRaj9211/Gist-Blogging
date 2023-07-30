@@ -1,28 +1,25 @@
-
 let bubbles = [];
 let connections = [];
-var canvas 
-
-setTimeout(10)
+var canvas
 
 function setup() {
   // const canvasWidth = windowWidth - (windowWidth*0.02);
   const canvasWidth = windowWidth;
   const canvasHeight = windowHeight;
-  var hh = document.getElementById('root').clientHeight;
-  console.log(hh)
-  canvas = createCanvas(canvasWidth, hh );
-  canvas.position(0,0);
+  // var hh = document.getElementById('root').clientHeight;
+  // console.log(hh)
+  canvas = createCanvas(canvasWidth, canvasHeight);
+  canvas.position(0, 0);
   canvas.style('z-index', '-10');
-  
+
 
 
   // Create 50 bubbles and add them to the array
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 50; i++) {
     let x = random(width);
     let y = random(height);
     let r = random(5, 15);
-    let greyShade = random(30, 255);
+    let greyShade = random(30, 200);
     let alphaValue = 255;
     let c = color(greyShade, greyShade, greyShade, alphaValue);
     let b = new Bubble(x, y, r, c);
@@ -74,9 +71,9 @@ function draw() {
 }
 
 function windowResized() {
-  const canvasWidth = windowWidth - (windowWidth*0.02);
+  const canvasWidth = windowWidth;
   const canvasHeight = windowHeight;
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(canvasWidth, canvasHeight);
 }
 
 function mouseMoved() {

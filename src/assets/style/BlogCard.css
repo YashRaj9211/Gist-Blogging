@@ -1,22 +1,23 @@
 .Blog-Card {
     background-color: #fff;
     color: var(--black);
-    max-width: 320px;
+    max-width: 300px;
     /* height: 35.6rem; */
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     margin: 14px;
     overflow: hidden;
-    transition-duration: 300ms;
+    /* transition-duration: 300ms; */
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.064));
 }
 
 .wave-svg {
     margin-top: -50px;
     fill: white;
-    transition-duration: 300ms;
-    /* min-width: 3rem; */
-    /* animation: draw   5s linear infinite; */
+    /* transition-duration: 300ms; */
+    min-width: 3rem;
+    animation: draw   5s linear infinite;
 }
 
 .post-card-content{
@@ -87,21 +88,22 @@ hr{
 /*Hover Effect Animation*/
 
 .Blog-Card:hover .read-more{
-    transition-duration: 300ms;
+    /* transition-duration: 300ms; */
     color: var(--black);
     background: var(--wheat);
     /* fill: black; */
 }
 
 .Blog-Card:hover .wave-svg > svg > path{
-    transition-duration: 300ms;
+    /* transition-duration: 300ms; */
     fill: var(--black);
+    margin: -50px;
     animation: draw 15s ease-in-out infinite;
 }
 
 
 .Blog-Card:hover{
-    transition-duration: 300ms;
+    /* transition-duration: 300ms; */
     background-color: var(--black);
     color: var(--wheat);
     /* border: 3px solid black; */
