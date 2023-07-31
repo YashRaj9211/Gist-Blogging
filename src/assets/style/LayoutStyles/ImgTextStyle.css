@@ -1,0 +1,35 @@
+.editor-container{
+    display: flex;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    resize: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.editor-edit-container{
+    width: 90%;
+    display: flex;
+}
+.editor-edit-container>img{
+    object-fit: cover;    
+    width: 100%;
+    flex: 1;
+}
+
+.text-zone{
+    width: 50%;
+    flex: 2;
+}
+
+.editor-options-button{
+    background-color: rgb(30,48,80);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,28 @@
+.img-layout{
+    /* resize: both; */
+    /* max-width: 50%; */
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    /* background-color: antiquewhite; */
+}
+
+.img-layout img{
+    width: 90%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.editor-options-button{
+    background-color: rgb(30,48,80);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

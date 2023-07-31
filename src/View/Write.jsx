@@ -1,11 +1,39 @@
 import React, { useState } from "react";
-import BlogWrite from "../Components/BlogWrite";
-import LayoutList from "../Components/LayoutList";
+
+import ImgLayout from "../Layouts/Img";
+import ImgTextLayout from "../Layouts/ImgText"
+import TextLayout from "../Layouts/Text"
+import TextImgLayout from "../Layouts/TextImg"
+
 import "../Assets/style/Write.css";
-import "../Assets/style/LayoutList.css";
 
 function WriteBlog() {
     const [draggedItem, setDraggedItem] = useState(null);
+    const [componentOrder, setComponentOrder] = useState([]);
+
+    function addCode(componentName) {
+        console.log("Add Code Running..."+componentName)
+        setComponentOrder((prevOrder) => [...prevOrder, componentName]);
+    }
+
+    function renderComponents() {
+        console.log("Render Component Running...")
+        return componentOrder.map((componentName, index) => {
+            switch (componentName) {
+                case 'Image':
+                    return <ImgLayout key={index} />;
+                case 'Image-Text':
+                    return <ImgTextLayout key={index} />;
+                case 'Text-Image':
+                    return <TextImgLayout key={index} />;
+                case 'Text':
+                    return <TextLayout key={index} />;
+                // Add cases for other component names here...
+                default:
+                    return null;
+            }
+        });
+    }
 
     function handleDragOver(event) {
         event.preventDefault();
@@ -15,34 +43,32 @@ function WriteBlog() {
     function handleDragStart(e, item) {
         console.log("Dragging....");
         console.log(e.target.innerHTML);
-        setDraggedItem(item);
+        console.log(item.innerHTML)
+        setDraggedItem(item.innerHTML);
     }
 
     function handleDrop(event) {
         event.preventDefault();
+        console.log("Handle Drop Runnin... "+draggedItem)
         if (draggedItem) {
-            const content = draggedItem.textContent; // or any data you want to transfer
-
-            // Add the content to the write-blog-post section
-            const writeBlogPost = document.querySelector(".write-blog-post");
-            writeBlogPost.innerHTML += content;
+            addCode(draggedItem);
         }
     }
 
     return (
         <div className="write">
             <div className="write-blog-post" onDragOver={handleDragOver} onDrop={handleDrop}>
-                {/* Your existing code here */}
                 <input className="title" type="text" placeholder="Title" />
+                {renderComponents()}
             </div>
-            {/* <LayoutList /> */}
-
+            
             <div className="layout-list">
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Image</div>
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Text</div>
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Text-Image</div>
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Image-Text</div>
             </div>
+
         </div>
     );
 }
