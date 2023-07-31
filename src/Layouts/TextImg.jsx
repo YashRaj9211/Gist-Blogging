@@ -1,7 +1,5 @@
-import BlogWrite from "../BlogWrite"
-import "../LayoutStyles/ImgTextLayout.css"
-
-
+import BlogWrite from "../Components/BlogWrite";
+import "../Assets/style/ImgTextLayout.css"
 function TextImgLayout() {
     return (
         <div className="img-text-layout">

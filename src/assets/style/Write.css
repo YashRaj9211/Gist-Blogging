@@ -1,0 +1,32 @@
+.write{
+    background-color: aquamarine;
+}
+.write-blog-post {
+    background-color: antiquewhite;
+    width: 60%;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid rgb(227, 227, 227);
+    height: 90vh;
+}
+
+.title {
+
+    /* background-color: rgb(248, 229, 204); */
+    width: 100%;
+    border: none;
+    outline-style: none;
+    height: 80px;
+    font-size: 50px;
+    padding: 5px;
+}
+
+.title:hover {
+    border-left: 2px solid var(--grey);
+}
+.para{
+    background-color: antiquewhite;
+}
+.para:hover{
+    border-left: 2px solid var(--grey);
+}

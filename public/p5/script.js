@@ -9,8 +9,10 @@ function setup() {
   // var hh = document.getElementById('root').clientHeight;
   // console.log(hh)
   canvas = createCanvas(canvasWidth, canvasHeight);
+  canvas.parent("home");
+
   canvas.position(0, 0);
-  canvas.style('z-index', '-10');
+  canvas.style('z-index', '-1');
 
 
 

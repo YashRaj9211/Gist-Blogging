@@ -1,9 +1,5 @@
-import "../assets/style/BlogWrite.css"
-// import "react-quill/dist/quill.snow.css";
 import "react-quill/dist/quill.bubble.css";
-import React, { useState } from "react";
 import ReactQuill from "react-quill";
-import ViewBlog from "./ViewBlog";
 
 function BlogWrite() {
 

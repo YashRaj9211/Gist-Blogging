@@ -1,21 +1,13 @@
-import WaveSVG from "../assets/svgs/wave";
-// import Wavejs from "../assets/helper/wave";
-
+import "../Assets/style/BlogCard.css"
 
 function BlogCard() {
-    console.log("Screen width: " + window.screen.width);
-    console.log("Screen height: " + window.screen.height);
-
-
     return (
-
-
         // Main blog card
         <div className="Blog-Card">
            
             <img src="https://plus.unsplash.com/premium_photo-1669386263238-3af768c65ae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Blog Image" className="Blog-Img" />
        
-            <WaveSVG />
+            {/* <WaveSVG />  */}
             <div className="post-card-content">
                 <div className="Blog-Details">
                     <ul className="Tags">

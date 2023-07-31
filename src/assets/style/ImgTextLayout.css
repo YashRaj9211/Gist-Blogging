@@ -1,0 +1,28 @@
+.img-text-layout{
+    /* display: flex; */
+    width: 90%;
+    /* height: min-content; */
+    color: var(--black);
+    font-size: 50px;
+    margin: auto;
+    position: relative;
+}
+
+.img-text-layout img{
+    position: absolute;
+    margin-left: auto;
+    top: 0;
+    height: 100%;
+    /* bottom: 0; */
+    flex: 1;
+
+    object-fit: cover;
+    width: fit-content;
+    max-width: 50%;
+    border-radius: 20px;
+}
+
+.text-zone{
+    margin-left:50%;
+    flex: 1;
+}

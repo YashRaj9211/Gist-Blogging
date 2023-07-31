@@ -1,5 +1,6 @@
 :root {
   --black: #1c1c1c;
+  --grey: #393939;
   --wheat: #f5deb3;
 
   --button-size: 14px;
@@ -7,17 +8,17 @@
 }
 
 .App {
-  /* overflow-y: hidden; */
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
   width: 100vw;
   align-items: center;
   align-content: center;
   height: 100vh;
-  color: var(--wheat);
-  /* color: #f5deb3; */
-  /* background: #000; */
+  color: var(--black);
+}
+
+.outlet-div{
+  /* position: fixed; */
+  margin-top: 80px;
+  top: 80px;
 }
 
 .welcome{

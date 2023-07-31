@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMagnifyingGlass, faBook } from '@fortawesome/free-solid-svg-icons'
-import '../assets/style/NavBar.css';
+import "../Assets/style/NavBar.css"
 
 function NavBar() {
   // const [offset,setOffset]=useState(0);
@@ -23,11 +24,12 @@ function NavBar() {
       <div className="logo">Gist</div>
       <div className="tabs">
         <ul className="nav-items">
-          <li className="item"><FontAwesomeIcon icon={faBook} /> Home</li>
-          <li className="item"><FontAwesomeIcon icon={faEnvelope} /> Write</li>
-          <li className="item" id="login">Login</li>
+          <li className="item"><Link to={`/`}><FontAwesomeIcon icon={faBook} />Home</Link></li>
+          <li className="item"><Link to={`/writeblog`}><FontAwesomeIcon icon={faEnvelope} /> Write</Link></li>
+          <li className="item" id="login"><Link to={`/login`}><FontAwesomeIcon icon={faEnvelope} /> Login</Link></li>
         </ul>
       </div>
+      
     </div>
   );
 }

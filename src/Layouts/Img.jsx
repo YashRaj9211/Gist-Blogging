@@ -1,4 +1,3 @@
-import "../LayoutStyles/ImgLayout.css"
 function ImgLayout(){
     return(
         <div className="img-layout">

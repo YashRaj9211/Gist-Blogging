@@ -1,4 +1,4 @@
-import "../assets/style/BlogPostsCont.css"
+import "../Assets/style/BlogPostsCont.css"
 import BlogCard from "./BlogCard"
 
 export default function BlogPostsContainer(){
