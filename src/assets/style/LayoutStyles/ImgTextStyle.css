@@ -1,9 +1,6 @@
 .editor-container{
     display: flex;
     width: 100%;
-    /* background-color: antiquewhite; */
-    /* resize: both; */
-    /* display: flex; */
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
@@ -39,11 +36,13 @@
 }
 
 .ql-container {
-    font-size: 20px !important;
+    /* font-size: 20px !important; */
     font-size: 18px !important;
     line-height: 1.58;
-    letter-spacing: -.004em;
+    letter-spacing: 0.05em;
+    word-spacing: 0.2em;
     font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* .ql-editor{

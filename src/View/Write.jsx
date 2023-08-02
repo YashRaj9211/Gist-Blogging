@@ -69,6 +69,11 @@ function WriteBlog() {
             <div className="write-blog-post" onDragOver={handleDragOver} onDrop={handleDrop}>
                 <input className="title" type="text" placeholder="Title" />
                 {renderComponents()}
+                <div className="drop-here">
+                    <div className="content-border">
+                        Drop Here
+                    </div>
+                </div>
             </div>
 
             <div className="right-container">
