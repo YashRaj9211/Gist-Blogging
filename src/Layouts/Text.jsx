@@ -17,7 +17,7 @@ function TextLayout(){
             <div
                 className="editor-options-button"
                 style={{
-                    visibility: isactive ? "visible" : "hidden"
+                    visibility: isactive ? "visible" : "hidden",
                 }}
             >
                 <FontAwesomeIcon icon={faPlus} size="2xl" color="white" />

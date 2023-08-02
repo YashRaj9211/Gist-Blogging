@@ -24,9 +24,7 @@ function ImgTextLayout() {
                 <FontAwesomeIcon icon={faPlus} size="2xl" color="white" />
             </div>
             <div className="editor-edit-container">
-                {/* <div className="editor-img-container"> */}
-                    <img src="https://img.freepik.com/free-vector/cinema-realistic-poster-with-illuminated-bucket-popcorn-drink-3d-glasses-reel-tickets-blue-background-with-tapes-vector-illustration_1284-77070.jpg" alt="" />
-                {/* </div> */}
+                    <img src="https://img.freepik.com/free-vector/cinema-realistic-poster-with-illuminated-bucket-popcorn-drink-3d-glasses-reel-tickets-blue-background-with-tapes-vector-illustration_1284-77070.jpg" alt="" />              
                 <div className="text-zone">
                     <BlogWrite />
                 </div>

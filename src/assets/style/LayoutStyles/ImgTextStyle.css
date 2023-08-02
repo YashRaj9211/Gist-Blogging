@@ -2,26 +2,11 @@
     display: flex;
     width: 100%;
     /* background-color: antiquewhite; */
-    resize: both;
-    display: flex;
+    /* resize: both; */
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
-}
-
-.editor-edit-container{
-    width: 90%;
-    display: flex;
-}
-.editor-edit-container>img{
-    object-fit: cover;    
-    width: 100%;
-    flex: 1;
-}
-
-.text-zone{
-    width: 50%;
-    flex: 2;
 }
 
 .editor-options-button{
@@ -32,4 +17,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1); */
 }
+
+.editor-edit-container{
+    width: 90%; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+.editor-edit-container> img{
+    object-fit: fill;    
+    width: 35%;
+    flex: 1;
+}
+
+.editor-edit-container>.text-zone{
+    /* width: 50%; */
+    flex: 2;
+}
+
+.ql-container {
+    font-size: 20px !important;
+    font-size: 18px !important;
+    line-height: 1.58;
+    letter-spacing: -.004em;
+    font-weight: 100;
+}
+
+/* .ql-editor{
+    font-size: 18px !important;
+    line-height: 1.58;
+    letter-spacing: -.004em;
+    font-weight: 100;
+} */

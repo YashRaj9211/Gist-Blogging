@@ -4,6 +4,7 @@ import ImgLayout from "../Layouts/Img";
 import ImgTextLayout from "../Layouts/ImgText"
 import TextLayout from "../Layouts/Text"
 import TextImgLayout from "../Layouts/TextImg"
+import scg from "../Assets/Frame 3.svg";
 
 import "../Assets/style/Write.css";
 
@@ -56,17 +57,32 @@ function WriteBlog() {
     }
 
     return (
-        <div className="write">
-            <div className="write-blog-post" onDragOver={handleDragOver} onDrop={handleDrop}>
-                <input className="title" type="text" placeholder="Title" />
-                {renderComponents()}
-            </div>
+        <div className="blog-write-container">           
             
             <div className="layout-list">
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Image</div>
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Text</div>
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Text-Image</div>
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Image-Text</div>
+            </div>
+
+            <div className="write-blog-post" onDragOver={handleDragOver} onDrop={handleDrop}>
+                <input className="title" type="text" placeholder="Title" />
+                {renderComponents()}
+            </div>
+
+            <div className="right-container">
+                <div className="hints">
+                    <span>Hint</span>
+                    <ul>
+                        <li>
+                            You can combine the patterns in many differnt ways to get an amazing outlet
+                        </li>
+                        <li>
+                            Experiment with the text editing tool
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </div>

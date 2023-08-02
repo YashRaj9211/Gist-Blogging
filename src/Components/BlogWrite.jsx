@@ -1,11 +1,17 @@
 import "react-quill/dist/quill.bubble.css";
 import ReactQuill from "react-quill";
+import { useState } from "react";
+import "../Assets/style/LayoutStyles/ImgTextStyle.css"
 
 function BlogWrite() {
+  const [enterText, setEnteredText] = useState("");
+
+  console.log("Quill text..."+enterText);
 
   const modules = {
     toolbar: [
-      [{ font: [] }],
+      // [{ font: [] }],
+      // [{'size': ['56px']}], 
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
       ["bold", "italic", "underline", "strike"],
       [{ color: [] }, { background: [] }],
@@ -18,7 +24,7 @@ function BlogWrite() {
   };
 
   return (
-      <ReactQuill modules={modules} theme="bubble" placeholder="The content starts here..." />    
+      <ReactQuill modules={modules} theme="bubble" value={enterText} onChange={setEnteredText} placeholder="The content starts here..." />    
   )
 }
 
