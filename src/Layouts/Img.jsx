@@ -13,13 +13,12 @@ function ImgLayout() {
     }
     return (
         <div className="img-layout" onMouseEnter={handleHover} onMouseLeave={handleHover}>
-
             <div
                 className="editor-options-button"
                 style={{
                     visibility: isactive? "visible": "hidden"
                 }}
-            >
+            > 
                 <FontAwesomeIcon icon={faPlus} size="2xl" color="white" />
             </div>
             <img

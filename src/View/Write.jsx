@@ -19,10 +19,17 @@ function WriteBlog() {
 
     function renderComponents() {
         console.log("Render Component Running...")
+        console.log("Component oRder... "+componentOrder)
         return componentOrder.map((componentName, index) => {
             switch (componentName) {
                 case 'Image':
-                    return <ImgLayout key={index} />;
+                    return (
+                        <div key={index} >
+                            <ImgLayout />
+                            <button onClick={() => handleDelete(index)}>Delte</button>
+                        </div>
+                    
+                    );
                 case 'Image-Text':
                     return <ImgTextLayout key={index} />;
                 case 'Text-Image':
@@ -35,6 +42,7 @@ function WriteBlog() {
             }
         });
     }
+
 
     function handleDragOver(event) {
         event.preventDefault();
@@ -56,6 +64,14 @@ function WriteBlog() {
         }
     }
 
+    function handleDelete(index) {
+        setComponentOrder((prevOrder) => {
+          const newOrder = [...prevOrder];
+          newOrder.splice(index, 1);
+          return newOrder;
+        });
+      }
+
     return (
         <div className="blog-write-container">           
             
@@ -66,14 +82,16 @@ function WriteBlog() {
                 <div className="layout-item" draggable="true" onDragStart={(e) => handleDragStart(e, e.target)}>Image-Text</div>
             </div>
 
-            <div className="write-blog-post" onDragOver={handleDragOver} onDrop={handleDrop}>
+            <div className="write-blog-post">
                 <input className="title" type="text" placeholder="Title" />
                 {renderComponents()}
-                <div className="drop-here">
-                    <div className="content-border">
-                        Drop Here
+                          
+                <div className="drop-here" onDragOver={handleDragOver} onDrop={handleDrop}>
+                    <div className="content-border" >
+                        DROP HERE
                     </div>
                 </div>
+                
             </div>
 
             <div className="right-container">

@@ -13,8 +13,13 @@ function ImgTextLayout() {
         setisactive(prevstate => !prevstate);
         console.log(isactive)
     }
+
+    function handleDelete(e){
+        console.log(e)
+        console.log("Handle Delete...")
+    }
     return (
-        <div className="editor-container" onMouseEnter={handleHover} onMouseLeave={handleHover}>
+        <div className="editor-container" onMouseEnter={handleHover} onMouseLeave={handleHover} onClick={(e) => handleDelete(e)}>
             <div
                 className="editor-options-button"
                 style={{

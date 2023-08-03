@@ -2,24 +2,18 @@
 
 .blog-write-container {
     display: flex;
-    /* flex-direction: row; */
     width: 95%;
     margin: 0 auto;
     height: 100vh;
     padding:10px 5px;
     border-left: 1px solid #f0f0f0;
-    border-right: 1px solid #f0f0f0;
-  
-    /* background-color: #f0f0f0; */
   }
 
   .layout-list{
     display: flex;
     flex-direction: column;
     flex: 1;
-    /* background-color: aqua; */
     border-right: 2px solid #f0f0f0;
-
   }
   
   .layout-item{
@@ -66,4 +60,19 @@
     font-size: 16px;
     font-weight: 800;
   }
+
+.drop-here{
+  border: 2px dashed #f0f0f0;
+  padding: 28px;
+  width: 90%;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 900;
+  color: #bcbcbc;
+}
+
+.content-border{
+  border: 1px solid #f0f0f0;
+  padding:20px 0px;
+}
   
